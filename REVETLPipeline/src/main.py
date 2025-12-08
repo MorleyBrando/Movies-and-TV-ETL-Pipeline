@@ -1,10 +1,8 @@
-from .csv_reader import csv_reader
-from .validator import validate
-from .cleaner import clean
-from .loader import load
-import os
-import psycopg2
-from .logger import logger
+from csv_reader import csv_reader
+from validator import validate
+from cleaner import clean
+from loader import load
+from logger import logger
 
 def run_pipeline():
     

@@ -1,5 +1,4 @@
-import regex as rx
-from .logger import logger
+from logger import logger
 
 def clean(data):
     data["YEAR"] = data["YEAR"].str.replace(r"–", "-", regex=True)
