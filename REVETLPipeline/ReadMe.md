@@ -1,9 +1,9 @@
-#Basic ETL Pipeline 
-##Movies and TV Shows
+# Basic ETL Pipeline 
+## Movies and TV Shows
 
 This is a basic ETL Pipeline that is meant to extract the Movies and TV dataset from a csv. Transform the dataset so that values are formatted well and not NULL. Extract the fixed dataset into a Postgres Database that can be viewed in DBeaver.
 
-##Project Structure
+## Project Structure
 ```python
 Movies-and-TV-ETL-Pipeline/
 |- REVETLPipeline
@@ -22,7 +22,7 @@ Movies-and-TV-ETL-Pipeline/
    |- etl.log
 ```
 
-##How To Start
+## How To Start
 ```
 python3 -m venv path/to/venv
 source path/to/venv/bin/activate #macOS/Linux
