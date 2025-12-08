@@ -1,0 +1,4 @@
+2025-12-05 16:16:45,139 - INFO - main.py:11 - STARTING ETL
+2025-12-05 16:16:45,194 - INFO - csv_reader.py:7 - source=movies.csv rows= 9999 path=/data/movies.csv
+2025-12-05 16:16:45,219 - INFO - cleaner.py:8 - source=movies.csv rows= 9999 path=/data/movies.csv - Year column format changed from "(%YYYY- )" to "(%YYYY-Present)" for shows still running
+2025-12-05 16:16:45,221 - INFO - cleaner.py:11 - source=movies.csv rows= 6817 path=/data/movies.csv - Number of rows dropped = 3182
