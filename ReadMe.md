@@ -1,7 +1,7 @@
 # Basic ETL Pipeline 
 ## Movies and TV Shows
 
-This is a basic ETL Pipeline that is meant to extract the Movies and TV dataset from a csv. Transform the dataset so that values are formatted well and not NULL. Extract the fixed dataset into a Postgres Database that can be viewed in DBeaver.
+This is a basic ETL Pipeline that is meant to extract the Movies and TV dataset from a csv. Transform the dataset so that values are formatted well and not NULL. Load the fixed dataset into a Postgres Database that can be viewed in DBeaver.
 
 ## Project Structure
 ```python
@@ -30,3 +30,10 @@ source path/to/venv/bin/activate #macOS/Linux
 python3 -m pip install -r requirements.txt
 python3 ./REVETLPipeline/src/main.py 
 ```
+
+## Tech Stack
+- Python
+- PostgreSQL
+- Pandas
+- Pycopg2
+- Logging

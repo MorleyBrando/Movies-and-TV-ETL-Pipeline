@@ -1,4 +1,7 @@
-2025-12-08 14:16:29,791 - INFO - main.py:9 - STARTING ETL
-2025-12-08 14:16:29,824 - INFO - csv_reader.py:7 - source=movies.csv rows= 9999 path=/data/movies.csv
-2025-12-08 14:16:29,838 - INFO - cleaner.py:7 - source=movies.csv rows= 9999 path=/data/movies.csv - Year column format changed from "(%YYYY- )" to "(%YYYY-Present)" for shows still running
-2025-12-08 14:16:29,840 - INFO - cleaner.py:10 - source=movies.csv rows= 6817 path=/data/movies.csv - Number of rows dropped = 3182
+2025-12-09 11:31:46,878 - INFO - main.py:9 - STARTING ETL
+2025-12-09 11:31:46,913 - INFO - csv_reader.py:7 - source=movies.csv rows= 9999 path=/data/movies.csv: CSV file data read
+2025-12-09 11:31:46,925 - INFO - cleaner.py:6 - source=movies.csv rows= 9999 path=/data/movies.csv: Year column format changed from "(%YYYY- )" to "(%YYYY-Present)" for shows still running
+2025-12-09 11:31:46,928 - INFO - cleaner.py:11 - source=movies.csv rows= 9999 path=/data/movies.csv: Votes changed from String to Integer Values
+2025-12-09 11:31:46,933 - INFO - cleaner.py:19 - source=movies.csv rows= 6817 path=/data/movies.csv: Number of rows dropped = 3182
+2025-12-09 11:31:47,988 - INFO - loader.py:42 - source=movies.csv rows= 6817 path=/data/movies.csv: Data loaded into Movies table in Postgres
+2025-12-09 11:31:47,990 - INFO - loader.py:79 - source=movies.csv rows= 6817 path=/data/movies.csv: Duplicate data was not loaded into Dupes table in Postgres because dupes table already created
