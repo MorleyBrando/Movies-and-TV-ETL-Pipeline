@@ -1,5 +1,5 @@
 import pandas as pd 
-from logger import logger
+from .logger import logger
 
 def csv_reader():
     

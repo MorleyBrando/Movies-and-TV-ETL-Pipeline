@@ -1,8 +1,8 @@
-from csv_reader import csv_reader
-from validator import validate
-from cleaner import clean
-from loader import load
-from logger import logger
+from .csv_reader import csv_reader
+from .validator import validate
+from .cleaner import clean
+from .loader import load
+from .logger import logger
 
 def run_pipeline():
     
@@ -10,8 +10,7 @@ def run_pipeline():
     data = csv_reader()
     data = validate(data)
     data = clean(data)
-    
-    load(data[0], data[1], data[2])
+    load(data[0], data[1], data[2], data[3])
     
 run_pipeline()
 

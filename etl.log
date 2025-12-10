@@ -1,7 +1,28 @@
-2025-12-09 11:31:46,878 - INFO - main.py:9 - STARTING ETL
-2025-12-09 11:31:46,913 - INFO - csv_reader.py:7 - source=movies.csv rows= 9999 path=/data/movies.csv: CSV file data read
-2025-12-09 11:31:46,925 - INFO - cleaner.py:6 - source=movies.csv rows= 9999 path=/data/movies.csv: Year column format changed from "(%YYYY- )" to "(%YYYY-Present)" for shows still running
-2025-12-09 11:31:46,928 - INFO - cleaner.py:11 - source=movies.csv rows= 9999 path=/data/movies.csv: Votes changed from String to Integer Values
-2025-12-09 11:31:46,933 - INFO - cleaner.py:19 - source=movies.csv rows= 6817 path=/data/movies.csv: Number of rows dropped = 3182
-2025-12-09 11:31:47,988 - INFO - loader.py:42 - source=movies.csv rows= 6817 path=/data/movies.csv: Data loaded into Movies table in Postgres
-2025-12-09 11:31:47,990 - INFO - loader.py:79 - source=movies.csv rows= 6817 path=/data/movies.csv: Duplicate data was not loaded into Dupes table in Postgres because dupes table already created
+2025-12-10 11:36:48,608 - INFO - cleaner.py:7 - source=movies.csv rows= 3 path=/data/movies.csv: Year column format changed from "(%YYYY- )" to "(%YYYY-Present)" for shows still running
+2025-12-10 11:36:48,609 - INFO - cleaner.py:12 - source=movies.csv rows= 3 path=/data/movies.csv: Votes changed from String to Integer Values
+2025-12-10 11:36:48,610 - INFO - cleaner.py:20 - source=movies.csv rows= 3 path=/data/movies.csv: 
+2025-12-10 11:36:48,612 - INFO - cleaner.py:26 - source=movies.csv rows= 0 path=/data/movies.csv: New Dataset of TV Shows created. Length of TV dataset = 0
+2025-12-10 11:36:48,612 - INFO - cleaner.py:27 - source=movies.csv rows= 3 path=/data/movies.csv: Number of rows dropped = 0
+2025-12-10 11:36:48,613 - INFO - cleaner.py:34 - source=movies.csv rows= 2 path=/data/movies.csv: Cleaned Movie dataset created by removing rows with Unknown Stars, 0 Ratings, Unknown One-Line, and 0 RunTime
+2025-12-10 11:36:48,614 - INFO - cleaner.py:41 - source=movies.csv rows= 0 path=/data/movies.csv: Cleaned TV dataset created by removing rows with Unknown Stars, 0 Ratings, Unknown One-Line, and 0 RunTime
+2025-12-10 11:36:48,616 - INFO - cleaner.py:7 - source=movies.csv rows= 3 path=/data/movies.csv: Year column format changed from "(%YYYY- )" to "(%YYYY-Present)" for shows still running
+2025-12-10 11:36:48,616 - INFO - cleaner.py:12 - source=movies.csv rows= 3 path=/data/movies.csv: Votes changed from String to Integer Values
+2025-12-10 11:36:48,617 - INFO - cleaner.py:20 - source=movies.csv rows= 3 path=/data/movies.csv: 
+2025-12-10 11:36:48,618 - INFO - cleaner.py:26 - source=movies.csv rows= 0 path=/data/movies.csv: New Dataset of TV Shows created. Length of TV dataset = 0
+2025-12-10 11:36:48,618 - INFO - cleaner.py:27 - source=movies.csv rows= 3 path=/data/movies.csv: Number of rows dropped = 0
+2025-12-10 11:36:48,619 - INFO - cleaner.py:34 - source=movies.csv rows= 2 path=/data/movies.csv: Cleaned Movie dataset created by removing rows with Unknown Stars, 0 Ratings, Unknown One-Line, and 0 RunTime
+2025-12-10 11:36:48,619 - INFO - cleaner.py:41 - source=movies.csv rows= 0 path=/data/movies.csv: Cleaned TV dataset created by removing rows with Unknown Stars, 0 Ratings, Unknown One-Line, and 0 RunTime
+2025-12-10 11:36:48,621 - INFO - cleaner.py:7 - source=movies.csv rows= 3 path=/data/movies.csv: Year column format changed from "(%YYYY- )" to "(%YYYY-Present)" for shows still running
+2025-12-10 11:36:48,621 - INFO - cleaner.py:12 - source=movies.csv rows= 3 path=/data/movies.csv: Votes changed from String to Integer Values
+2025-12-10 11:36:48,622 - INFO - cleaner.py:20 - source=movies.csv rows= 3 path=/data/movies.csv: 
+2025-12-10 11:36:48,623 - INFO - cleaner.py:26 - source=movies.csv rows= 0 path=/data/movies.csv: New Dataset of TV Shows created. Length of TV dataset = 0
+2025-12-10 11:36:48,623 - INFO - cleaner.py:27 - source=movies.csv rows= 3 path=/data/movies.csv: Number of rows dropped = 0
+2025-12-10 11:36:48,624 - INFO - cleaner.py:34 - source=movies.csv rows= 2 path=/data/movies.csv: Cleaned Movie dataset created by removing rows with Unknown Stars, 0 Ratings, Unknown One-Line, and 0 RunTime
+2025-12-10 11:36:48,625 - INFO - cleaner.py:41 - source=movies.csv rows= 0 path=/data/movies.csv: Cleaned TV dataset created by removing rows with Unknown Stars, 0 Ratings, Unknown One-Line, and 0 RunTime
+2025-12-10 11:36:48,627 - INFO - cleaner.py:7 - source=movies.csv rows= 3 path=/data/movies.csv: Year column format changed from "(%YYYY- )" to "(%YYYY-Present)" for shows still running
+2025-12-10 11:36:48,627 - INFO - cleaner.py:12 - source=movies.csv rows= 3 path=/data/movies.csv: Votes changed from String to Integer Values
+2025-12-10 11:36:48,628 - INFO - cleaner.py:20 - source=movies.csv rows= 3 path=/data/movies.csv: 
+2025-12-10 11:36:48,628 - INFO - cleaner.py:26 - source=movies.csv rows= 0 path=/data/movies.csv: New Dataset of TV Shows created. Length of TV dataset = 0
+2025-12-10 11:36:48,628 - INFO - cleaner.py:27 - source=movies.csv rows= 3 path=/data/movies.csv: Number of rows dropped = 0
+2025-12-10 11:36:48,629 - INFO - cleaner.py:34 - source=movies.csv rows= 2 path=/data/movies.csv: Cleaned Movie dataset created by removing rows with Unknown Stars, 0 Ratings, Unknown One-Line, and 0 RunTime
+2025-12-10 11:36:48,630 - INFO - cleaner.py:41 - source=movies.csv rows= 0 path=/data/movies.csv: Cleaned TV dataset created by removing rows with Unknown Stars, 0 Ratings, Unknown One-Line, and 0 RunTime
