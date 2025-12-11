@@ -8,6 +8,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 
 from src.cleaner import clean
     # Creating a sample DataFrame
+    
 data = pd.DataFrame({
     'MOVIES': ['Movie1', 'Movie2', 'Movie3'],
     'YEAR': ['(2020)', '2021', '(2020- )'],

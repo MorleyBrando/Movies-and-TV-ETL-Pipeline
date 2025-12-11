@@ -24,7 +24,6 @@ This is a basic ETL Pipeline that is meant to extract the Movies and TV dataset 
 │   └── tests
 │       ├── __pycache__
 │       ├── test_clean.py
-│       ├── test_load.py
 │       └── test_validate.py
 ├── ReadMe.md
 ├── etl.log

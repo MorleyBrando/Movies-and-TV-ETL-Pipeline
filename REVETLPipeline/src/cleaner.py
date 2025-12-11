@@ -1,6 +1,7 @@
 from logger import logger
 
 def clean(data):
+    
     #Cleaning Year Column
     data["YEAR"] = data["YEAR"].str.replace(r"–", "-", regex=True)
     data["YEAR"] = data["YEAR"].str.replace("- ", "-Present", regex=True)

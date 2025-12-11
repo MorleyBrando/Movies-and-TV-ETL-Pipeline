@@ -1,15 +1,15 @@
-2025-12-10 20:39:56,970 - INFO - main.py:9 - STARTING ETL
-2025-12-10 20:39:57,024 - INFO - csv_reader.py:7 - source=movies.csv rows= 9999 path=/data/movies.csv: CSV file data read
-2025-12-10 20:39:57,033 - INFO - validator.py:13 - source=movies.csv rows= 9999 path=/data/movies.csv: Gave NULL values a value
-2025-12-10 20:39:57,042 - INFO - cleaner.py:7 - source=movies.csv rows= 9999 path=/data/movies.csv: Year column format changed from "(%YYYY- )" to "(%YYYY-Present)" for shows still running
-2025-12-10 20:39:57,047 - INFO - cleaner.py:12 - source=movies.csv rows= 9999 path=/data/movies.csv: Votes changed from String to Integer Values
-2025-12-10 20:39:57,053 - INFO - cleaner.py:20 - source=movies.csv rows= 9999 path=/data/movies.csv: 
-2025-12-10 20:39:57,056 - INFO - cleaner.py:26 - source=movies.csv rows= 3601 path=/data/movies.csv: New Dataset of TV Shows created. Length of TV dataset = 3601
-2025-12-10 20:39:57,057 - INFO - cleaner.py:27 - source=movies.csv rows= 6398 path=/data/movies.csv: Number of rows dropped = 3601
-2025-12-10 20:39:57,059 - INFO - cleaner.py:34 - source=movies.csv rows= 4813 path=/data/movies.csv: Cleaned Movie dataset created by removing rows with Unknown Stars, 0 Ratings, Unknown One-Line, and 0 RunTime
-2025-12-10 20:39:57,061 - INFO - cleaner.py:41 - source=movies.csv rows= 1803 path=/data/movies.csv: Cleaned TV dataset created by removing rows with Unknown Stars, 0 Ratings, Unknown One-Line, and 0 RunTime
-2025-12-10 20:39:59,132 - INFO - loader.py:43 - source=movies.csv rows= 6398 path=/data/movies.csv: Data loaded into Movies table in Postgres
-2025-12-10 20:40:00,093 - INFO - loader.py:78 - source=movies.csv rows= 6398 path=/data/movies.csv: Duplicate Data loaded into bronze_duplicates.
-2025-12-10 20:40:02,165 - INFO - loader.py:107 - source=movies.csv rows= 6398 path=/data/movies.csv: Clean Movie data loaded into silver_movies table in Postgres
-2025-12-10 20:40:03,051 - INFO - loader.py:143 - source=movies.csv rows= 6398 path=/data/movies.csv: Duplicate data loaded into silver_duplicates table in Postgres
-2025-12-10 20:40:03,052 - INFO - loader.py:147 - source=movies.csv rows= 6398 path=/data/movies.csv: All Tables data were loaded.
+2025-12-11 09:14:47,197 - INFO - main.py:9 - STARTING ETL
+2025-12-11 09:14:47,251 - INFO - csv_reader.py:7 - source=movies.csv rows= 9999 path=/data/movies.csv: CSV file data read
+2025-12-11 09:14:47,260 - INFO - validator.py:15 - source=movies.csv rows= 9999 path=/data/movies.csv: Gave NULL values a value
+2025-12-11 09:14:47,269 - INFO - cleaner.py:8 - source=movies.csv rows= 9999 path=/data/movies.csv: Year column format changed from "(%YYYY- )" to "(%YYYY-Present)" for shows still running
+2025-12-11 09:14:47,273 - INFO - cleaner.py:13 - source=movies.csv rows= 9999 path=/data/movies.csv: Votes changed from String to Integer Values
+2025-12-11 09:14:47,280 - INFO - cleaner.py:21 - source=movies.csv rows= 9999 path=/data/movies.csv: 
+2025-12-11 09:14:47,283 - INFO - cleaner.py:27 - source=movies.csv rows= 3601 path=/data/movies.csv: New Dataset of TV Shows created. Length of TV dataset = 3601
+2025-12-11 09:14:47,283 - INFO - cleaner.py:28 - source=movies.csv rows= 6398 path=/data/movies.csv: Number of rows dropped = 3601
+2025-12-11 09:14:47,286 - INFO - cleaner.py:35 - source=movies.csv rows= 4813 path=/data/movies.csv: Cleaned Movie dataset created by removing rows with Unknown Stars, 0 Ratings, Unknown One-Line, and 0 RunTime
+2025-12-11 09:14:47,287 - INFO - cleaner.py:42 - source=movies.csv rows= 1803 path=/data/movies.csv: Cleaned TV dataset created by removing rows with Unknown Stars, 0 Ratings, Unknown One-Line, and 0 RunTime
+2025-12-11 09:14:48,835 - INFO - loader.py:42 - source=movies.csv rows= 6398 path=/data/movies.csv: Data loaded into Movies table in Postgres
+2025-12-11 09:14:48,863 - INFO - loader.py:80 - source=movies.csv rows= 6398 path=/data/movies.csv: Duplicate Data not loaded into bronze_duplicates.
+2025-12-11 09:14:49,897 - INFO - loader.py:106 - source=movies.csv rows= 6398 path=/data/movies.csv: Clean Movie data loaded into silver_movies table in Postgres
+2025-12-11 09:14:49,897 - INFO - loader.py:143 - source=movies.csv rows= 6398 path=/data/movies.csv: Duplicate data was not loaded into silver_duplicates table in Postgres because silver_duplicates table already created.
+2025-12-11 09:14:49,897 - INFO - loader.py:145 - source=movies.csv rows= 6398 path=/data/movies.csv: All Tables data were loaded.

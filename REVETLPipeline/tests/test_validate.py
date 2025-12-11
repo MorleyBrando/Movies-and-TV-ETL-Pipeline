@@ -35,11 +35,11 @@ def test_validate_null_values():
     assert validated_data['GENRE'].isnull().sum() == 0
     
     # Checking specific replacements
-    assert validated_data.loc[1, 'YEAR'] == "Unkown"
-    assert validated_data.loc[1, 'GENRE'] == "Unkown"
+    assert validated_data.loc[1, 'YEAR'] == "Unknown"
+    assert validated_data.loc[1, 'GENRE'] == "Unknown"
     assert validated_data.loc[2, 'RATING'] == 0
-    assert validated_data.loc[2, 'ONE-LINE'] == "Unkown"
-    assert validated_data.loc[1, 'STARS'] == "Unkown"
+    assert validated_data.loc[2, 'ONE-LINE'] == "Unknown"
+    assert validated_data.loc[1, 'STARS'] == "Unknown"
     assert validated_data.loc[1, 'VOTES'] == 0
     assert validated_data.loc[1, 'RunTime'] == 0
     assert validated_data.loc[1, 'Gross'] == 0

@@ -16,7 +16,6 @@ def load(data, tv, cleanMovie, cleanTv):
     
     #Creating bronze_movies table if it does not exist
     sql_create = """CREATE TABLE IF NOT EXISTS bronze_movies(
-    id SERIAL PRIMARY KEY, 
     Movie TEXT UNIQUE NOT NULL CHECK (length(Movie) BETWEEN 1 AND 120),
     year TEXT,       
     Genre TEXT, 
@@ -118,7 +117,7 @@ def load(data, tv, cleanMovie, cleanTv):
     #Creating silver_duplicates table and entering data if it does not exist
     if not exists:
         sql_create = """CREATE TABLE IF NOT EXISTS silver_duplicates(
-        Movie TEXT UNIQUE NOT NULL CHECK (length(Movie) BETWEEN 1 AND 120),
+        Movie TEXT NOT NULL CHECK (length(Movie) BETWEEN 1 AND 120),
         year TEXT,       
         Genre TEXT, 
         Rating NUMERIC(2,1),
@@ -135,8 +134,7 @@ def load(data, tv, cleanMovie, cleanTv):
             
             sql_insert = """
             INSERT INTO silver_duplicates(Movie, year, Genre, Rating, One_line, Stars, Votes, Runtime, Gross) 
-            Values (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-            ON CONFLICT (Movie) DO NOTHING;
+            Values (%s, %s, %s, %s, %s, %s, %s, %s, %s);
             """
             cursor.execute(sql_insert, (row['MOVIES'], row['YEAR'], row['GENRE'], row['RATING'], row['ONE-LINE'], row['STARS'], int(row['VOTES']), row['RunTime'], row['Gross']))
             conn.commit()
