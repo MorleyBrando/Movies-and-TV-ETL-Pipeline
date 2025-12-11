@@ -23,7 +23,7 @@ def load(data, tv, cleanMovie, cleanTv):
     Rating NUMERIC(2,1),
     One_Line TEXT,
     Stars TEXT,
-    Votes TEXT,
+    Votes INT,
     Runtime INT,
     Gross TEXT);"""
             
@@ -37,7 +37,7 @@ def load(data, tv, cleanMovie, cleanTv):
         Values (%s, %s, %s, %s, %s, %s, %s, %s, %s)
         ON CONFLICT (Movie) DO NOTHING;
         """
-        cursor.execute(sql_insert, (row['MOVIES'], row['YEAR'], row['GENRE'], row['RATING'], row['ONE-LINE'], row['STARS'], row['VOTES'], row['RunTime'], row['Gross']))
+        cursor.execute(sql_insert, (row['MOVIES'], row['YEAR'], row['GENRE'], row['RATING'], row['ONE-LINE'], row['STARS'], int(row['VOTES']), row['RunTime'], row['Gross']))
         conn.commit()  
         
     logger.info('source=movies.csv rows= %s path=/data/movies.csv: Data loaded into Movies table in Postgres', len(data))
@@ -60,7 +60,7 @@ def load(data, tv, cleanMovie, cleanTv):
         Rating NUMERIC(2,1),
         One_Line TEXT,
         Stars TEXT,
-        Votes TEXT,
+        Votes INT,
         Runtime INT,
         Gross TEXT);"""
         
@@ -73,7 +73,7 @@ def load(data, tv, cleanMovie, cleanTv):
             INSERT INTO bronze_duplicates(Movie, year, Genre, Rating, One_line, Stars, Votes, Runtime, Gross) 
             Values (%s, %s, %s, %s, %s, %s, %s, %s, %s);
             """
-            cursor.execute(sql_insert, (row['MOVIES'], row['YEAR'], row['GENRE'], row['RATING'], row['ONE-LINE'], row['STARS'], row['VOTES'], row['RunTime'], row['Gross']))
+            cursor.execute(sql_insert, (row['MOVIES'], row['YEAR'], row['GENRE'], row['RATING'], row['ONE-LINE'], row['STARS'], int(row['VOTES']), row['RunTime'], row['Gross']))
             conn.commit()
         logger.info('source=movies.csv rows= %s path=/data/movies.csv: Duplicate Data loaded into bronze_duplicates.', len(data))
             
@@ -88,7 +88,7 @@ def load(data, tv, cleanMovie, cleanTv):
     Rating NUMERIC(2,1),
     One_Line TEXT,
     Stars TEXT,
-    Votes TEXT,
+    Votes INT,
     Runtime INT,
     Gross TEXT);"""
             
@@ -102,7 +102,7 @@ def load(data, tv, cleanMovie, cleanTv):
         Values (%s, %s, %s, %s, %s, %s, %s, %s, %s)
         ON CONFLICT (Movie) DO NOTHING;
         """
-        cursor.execute(sql_insert, (row['MOVIES'], row['YEAR'], row['GENRE'], row['RATING'], row['ONE-LINE'], row['STARS'], row['VOTES'], row['RunTime'], row['Gross']))
+        cursor.execute(sql_insert, (row['MOVIES'], row['YEAR'], row['GENRE'], row['RATING'], row['ONE-LINE'], row['STARS'], int(row['VOTES']), row['RunTime'], row['Gross']))
         conn.commit()  
     logger.info('source=movies.csv rows= %s path=/data/movies.csv: Clean Movie data loaded into silver_movies table in Postgres', len(data))
 
@@ -124,7 +124,7 @@ def load(data, tv, cleanMovie, cleanTv):
         Rating NUMERIC(2,1),
         One_Line TEXT,
         Stars TEXT,
-        Votes TEXT,
+        Votes INT,
         Runtime INT,
         Gross TEXT);"""
                 
@@ -138,7 +138,7 @@ def load(data, tv, cleanMovie, cleanTv):
             Values (%s, %s, %s, %s, %s, %s, %s, %s, %s)
             ON CONFLICT (Movie) DO NOTHING;
             """
-            cursor.execute(sql_insert, (row['MOVIES'], row['YEAR'], row['GENRE'], row['RATING'], row['ONE-LINE'], row['STARS'], row['VOTES'], row['RunTime'], row['Gross']))
+            cursor.execute(sql_insert, (row['MOVIES'], row['YEAR'], row['GENRE'], row['RATING'], row['ONE-LINE'], row['STARS'], int(row['VOTES']), row['RunTime'], row['Gross']))
             conn.commit()
         logger.info('source=movies.csv rows= %s path=/data/movies.csv: Duplicate data loaded into silver_duplicates table in Postgres', len(data)) 
     else:

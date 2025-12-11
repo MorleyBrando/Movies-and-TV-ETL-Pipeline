@@ -1,4 +1,4 @@
-from .logger import logger
+from logger import logger
 def validate(data):
     
     #Removing rows where MOVIE is NULL

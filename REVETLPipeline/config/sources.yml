@@ -1,0 +1,95 @@
+project:
+  name: "Movies and TV ETL Pipeline"
+  version: "1.0"
+
+source:
+  name: "movies.csv"
+  type: "csv"
+  path: "data/movies.csv"     # relative path recommended
+  logs: "etl.log"
+
+database:
+  schema: "public"
+  tables:
+    bronze_movies:
+      name: "bronze_movies"
+      schema:
+        Movie: "TEXT PRIMARY KEY"
+        Year: "TEXT"
+        Genre: "TEXT"
+        Rating: "NUMERIC(2,1)"
+        One_Line: "TEXT"
+        Stars: "TEXT"
+        Votes: "INT"
+        Runtime: "INT"
+        Gross: "TEXT"
+
+    silver_movies:
+      name: "silver_movies"
+      schema:
+        Movie: "TEXT PRIMARY KEY"
+        Year: "TEXT"
+        Genre: "TEXT"
+        Rating: "NUMERIC(2,1)"
+        One_Line: "TEXT"
+        Stars: "TEXT"
+        Votes: "INT"
+        Runtime: "INT"
+        Gross: "TEXT"
+
+    bronze_duplicates:
+      name: "bronze_duplicates"
+      schema:
+        Movie: "TEXT"
+        Year: "TEXT"
+        Genre: "TEXT"
+        Rating: "NUMERIC(2,1)"
+        One_Line: "TEXT"
+        Stars: "TEXT"
+        Votes: "INT"
+        Runtime: "INT"
+        Gross: "TEXT"
+
+    silver_duplicates:
+      name: "silver_duplicates"
+      schema:
+        Movie: "TEXT"
+        Year: "TEXT"
+        Genre: "TEXT"
+        Rating: "NUMERIC(2,1)"
+        One_Line: "TEXT"
+        Stars: "TEXT"
+        Votes: "INT"
+        Runtime: "INT"
+        Gross: "TEXT"
+
+etl:
+  drop_duplicate_on:
+    - TITLE
+    - YEAR
+
+  filters:
+    remove_zero_values:
+      - RATING
+      - RUNTIME
+
+  fill_values:
+    YEAR: ""
+    RATING: 0
+    RUNTIME: 0
+    GENRE: "Unknown"
+
+validation:
+  required_columns:
+    - TITLE
+    - YEAR
+    - GENRE
+    - RUNTIME
+    - RATING
+
+  numeric_columns:
+    - RATING
+    - RUNTIME
+
+logging:
+  level: "INFO"
