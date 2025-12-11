@@ -5,21 +5,33 @@ This is a basic ETL Pipeline that is meant to extract the Movies and TV dataset 
 
 ## Project Structure
 ```python
-Movies-and-TV-ETL-Pipeline/
-|- REVETLPipeline
-   |- data 
-      |- movies.csv
-   |- src
-       |- cleaner.py
-       |- confiq.py
-       |- csv_reader.py
-       |- loader.py
-       |- logger.py
-       |- main.py
-       |- validator.py
-   |-ReadMe.md
-   |- requirements.txt
-   |- etl.log
+.
+├── REVETLPipeline
+│   ├── config
+│   │   └── sources.yml
+│   ├── data
+│   │   └── movies.csv
+│   ├── src
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   ├── cleaner.py
+│   │   ├── config.py
+│   │   ├── csv_reader.py
+│   │   ├── loader.py
+│   │   ├── logger.py
+│   │   ├── main.py
+│   │   └── validator.py
+│   └── tests
+│       ├── __pycache__
+│       ├── test_clean.py
+│       ├── test_load.py
+│       └── test_validate.py
+├── ReadMe.md
+├── etl.log
+├── path
+│   └── to
+│       └── venv
+└── requirements.txt
 ```
 
 ## How To Start
